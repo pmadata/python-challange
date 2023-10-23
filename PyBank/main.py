@@ -35,10 +35,15 @@ with open(filename) as csvfile:
             Max_DEC[0] = row[0]
             Max_DEC[1] = Profit_Change
                    
-    Average = sum(Change_list)/len(Change_list) 
+    Profit_Loss = f"{int(Profit_Loss):.2f}"  
+    Profit_Change = f"{int(Profit_Change):.2f}"   
+      
+    Average = sum(Change_list)/len(Change_list)
+    Average = f"{int(Average):.2f}"
+                       
     print ("Total Months:", Total_Month)
     print ("Total:", Profit_Loss)
     print ("Average of Change:" + str(Average))
-    print ("Greatest Increase in Profits:" + str(Max_INC[0]) + "," + str(Max_INC[1]))
-    print ("Greatest Decrease in Profits:" + str(Max_DEC[0]) + "," + str(Max_DEC[1]))
+    print ("Greatest Increase in Profits:" + str(Max_INC[0])  + "(" + str(Max_INC[1])+ ")")
+    print ("Greatest Decrease in Profits:" + str(Max_DEC[0])  + "(" + str(Max_DEC[1]) + ")")
    
